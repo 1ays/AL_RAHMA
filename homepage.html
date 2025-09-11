@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="menu.css" rel="stylesheet">
+  <link href="homepage.css" rel="stylesheet">
+  <title>AL-RAHMA - Homepage</title>
+</head>
+<body>
+  <!-- Navigation Header -->
+  <nav class="main-navbar">
+    <div class="nav-container">
+      <a href="welcome.html" class="nav-logo">AL-RAHMA</a>
+      
+      <!-- Mobile menu toggle -->
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="welcome.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="signin.html" class="nav-link signin-btn">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header class="page-header">
+      <h1>Support Our Community</h1>
+      <p>Every donation makes a difference. Choose how you'd like to help.</p>
+    </header>
+
+    <nav class="image-menu">
+      <!-- Repeat items -->
+      <div class="item">
+        <div class="thumb">Placeholder 1</div>
+        <div class="label">Menu Item 1</div>
+        <div class="actions">
+         <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+      <button class="btn-details" data-details="This is more info about item 1.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 2</div>
+        <div class="label">Menu Item 2</div>
+        <div class="actions">
+           <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 2.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 3</div>
+        <div class="label">Menu Item 3</div>
+        <div class="actions">
+           <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 3.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 4</div>
+        <div class="label">Menu Item 4</div>
+        <div class="actions">
+          <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 4.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 5</div>
+        <div class="label">Menu Item 5</div>
+        <div class="actions">
+           <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 5.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 6</div>
+        <div class="label">Menu Item 6</div>
+        <div class="actions">
+          <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 6.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 7</div>
+        <div class="label">Menu Item 7</div>
+        <div class="actions">
+           <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 7.">More Details</button>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="thumb">Placeholder 8</div>
+        <div class="label">Menu Item 8</div>
+        <div class="actions">
+           <a href="signin.html" class="btn-donate">Donate</a>
+          <a href="signin.html" class="btn-offer">Send Offer</a>
+          <button class="btn-details" data-details="This is more info about item 8.">More Details</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>More Details</h2>
+      <p id="modal-text">Details will appear here...</p>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Modal functionality
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modal-text");
+    const closeBtn = document.getElementById("close-modal");
+
+    document.querySelectorAll(".btn-details").forEach(btn => {
+      btn.addEventListener("click", () => {
+        modalText.textContent = btn.getAttribute("data-details");
+        modal.classList.add("active");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
