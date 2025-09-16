@@ -1,0 +1,687 @@
+/*default*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+  }
+
+ body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("../gazaPics/GAZA.png") no-repeat center center/cover;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden;
+}
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F0F2D5;
+    padding: clamp(10px, 2vw, 18px) clamp(20px, 8vw, 100px);
+    transition: all 0.3s ease;
+  }
+  
+  .logo {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 200;
+    color: #04361D;
+    transition: all 0.3s ease;
+  }
+
+  .home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .home-img {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .home-img img {
+    width: 100%;
+     order: 1;
+  }
+
+
+  
+  /*lktiba*/
+
+
+
+  .home-text {
+    width: 100%;
+    max-width: 900px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #B0183D;
+  }
+  .home-text h1 {
+    font-family: 'Alfa Slab One';
+    padding: clamp(8px, 1vh, 15px);
+   
+    font-size: clamp(1.3rem, 5vw, 3.5rem);
+    
+  }
+  
+  .home-text h2 {
+    font-family: 'raleway';
+   
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    text-align: center;
+  }
+
+
+
+   /* menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    background: rgba(240, 242, 213, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle:hover {
+    background: rgba(240, 242, 213, 0.4);
+    transform: scale(1.05);
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #04361D;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    display: block;
+  }
+  
+  .menu-toggle.active {
+    background: rgba(14, 104, 57, 0.1);
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background: #0e6839;
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background: #0e6839;
+  }
+
+  /*navbar*/
+
+
+  /*navbar fl big screen*/
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: clamp(35px, 2vw, 40px);
+  }
+  
+  .navbar a {
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    padding: clamp(15px, 2vw, 20px) clamp(10px, 1.5vw, 20px);
+    color: #04361D;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    font-family: poppins;
+  }
+  
+  .navbar a:hover {
+    color: #0e6839;
+    background: rgba(14, 104, 57, 0.1);
+    transform: translateY(-2px);
+  }
+
+
+  /* navbar f big screen */
+@media(min-width: 770px) {
+  header {
+    padding: 15px 50px;
+  }
+  
+  .logo {
+    font-size: 3rem;
+  }
+  
+  .navbar a {
+    font-size: 1rem;
+    padding: 15px 15px;
+  }
+  
+  .menu-toggle {
+    display: none !important;
+  }
+  
+  .navbar {
+    display: flex !important;
+    position: static !important;
+    max-height: none !important;
+    flex-direction: row !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+.home-text{
+  margin-top: 190px;
+}
+.buttons{
+  margin-top: 90px;
+}
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;       /* distance from bottom */
+  right: 20px;        /* distance from right */
+  width: 40px;        /* button size */
+  height: 40px;
+  border-radius: 50%; /* round */
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;
+}
+
+.chatbot-btn img {
+  width: 100px;   /* fit nicely inside */
+  height: auto;
+  pointer-events: none;
+}
+
+
+
+}
+
+
+
+/* navbar fl phone screen */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+  
+  .home {
+    padding-top: clamp(60px, 10vh, 80px);
+  }
+  
+  .menu-toggle {
+    display: flex;
+    order: 2;
+  }
+  
+  
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #F0F2D5;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 0 0 15px 15px;
+    z-index: 999;
+  }
+  
+  .navbar.active {
+    max-height: 400px;
+    overflow: visible;
+  }
+  
+  .navbar li {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .navbar a {
+    width: 100%;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(4, 54, 29, 0.1);
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    display: block;
+    border-radius: 8px;
+    margin: 3px 0;
+  }
+  
+  .navbar a:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  .navbar a:hover {
+    background: rgba(14, 104, 57, 0.15);
+    transform: translateX(5px);
+  }
+
+  .home-text{
+  margin-top: 260px;
+}
+.buttons{
+  margin-top: 100px;
+}
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;          /* space from bottom */
+  right: 20px;           /* space from right */
+  width: 10px;
+  height: 40px;
+  border-radius: 50%;    /* round button */
+  background: #ffffff;
+  border: none;          /* remove border */
+  cursor: pointer;       /* pointer on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 1000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;  /* light hover background */
+}
+
+.chatbot-btn img {
+  width: 1%;   /* make icon fit inside */
+  height: 1%;
+  pointer-events: none; /* so clicks go to button not image */
+}
+
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;       /* distance from bottom */
+  right: 20px;        /* distance from right */
+  width: 40px;        /* button size */
+  height: 40px;
+  border-radius: 50%; /* round */
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;
+}
+
+.chatbot-btn img {
+  width: 100px;   /* fit nicely inside */
+  height: auto;
+  pointer-events: none;
+}
+}
+  
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 4vw, 10px)
+}
+
+/*lbuttons ki tkon big screen*/
+
+
+/*lbutton ta3 sign in */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 46px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 26px ;
+  background-color: #04361D;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #F0F2D5;
+  box-shadow: 0 0 0 2px #0e6839;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 30px;
+  fill: #F0F2D5;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 13px;
+  top: 17px;
+}
+
+.animated-button .arr-2 {
+  left: -15%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #F0F2D5;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  color: #F0F2D5;
+  right: 8px;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #04361D;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -15%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 14px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(32px);
+  color: #04361D;
+  left: 8px;
+}
+
+.animated-button:hover svg {
+  fill: #04361D;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #0e6839;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+/*lbutton ta3 enter as a guest */
+
+.btn {
+  padding: clamp(8px, 1.5vh, 12px) clamp(20px, 6vw, 35px);
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: #F0F2D5;
+  box-shadow:  #0e6839 0 0 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: clamp(12px, 3.5vw, 18px);
+  transition: all 0.5s ease;
+  color: #0e6839;
+  width: 100%;
+  max-width: 260px;
+  min-height: clamp(40px, 6vh, 50px);
+}
+
+.btn:hover {
+  letter-spacing: 3px;
+  background-color: #0e6839;
+  color: #F0F2D5;
+  box-shadow: #F0F2D5 0px 7px 29px 0px;
+}
+
+.btn:active {
+  letter-spacing: 3px;
+  background-color: #0e6839;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #F0F2D5 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+
+
+/* Medium Mobile Screens - 640px to 767px */
+@media (min-width: 640px) and (max-width: 769px) {
+  .home {
+    padding: 0 25px;
+    height: 100vh;
+  }
+  
+  .buttons {
+    display: flex;
+   justify-content: center;
+   align-items: center; 
+  }
+  
+  .animated-button,
+  .btn {
+    max-width: 260px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Small Phones - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .home {
+    padding: 0 20px;
+    height: 100vh;
+  }
+  
+  .home-text h1 {
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+  }
+  
+  .home-text h2 {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+  }
+  
+  .buttons {
+    max-width: 280px;
+    display: flex;
+   justify-content: center;
+   align-items: center; 
+   margin-left: clamp(10px,100vw,100px);
+    
+  }
+  
+  .animated-button,
+  .btn {
+    max-width: 240px;
+  }
+}
+
+
+
+
+
+
+/* Extra Small Phones*/
+@media (max-width: 479px)and (min-width:320px) {
+  .home {
+    padding: 0 15px;
+    height: 100vh;
+  }
+  
+  .home-text {
+    margin-bottom: -10px;
+  }
+  
+  .home-text h1 {
+    font-size: clamp(1.2rem, 8vw, 2rem);
+    padding: clamp(5px, 1vh, 10px);
+  }
+  
+  .home-text h2 {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+    margin: clamp(3px, 0.5vh, 8px) 0;
+  }
+  
+  .buttons {
+    gap: clamp(8px, 1.5vh, 15px);
+   
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:50px; 
+  }
+  
+  .animated-button .text{
+    left: 7px;
+  }
+
+  .animated-button {
+    width:150px;
+    font-size: clamp(20px, 4vw, 16px);
+    padding: clamp(6px, 1vh, 10px) clamp(15px, 5vw, 25px);
+    min-height: clamp(35px, 5vh, 45px);
+  }
+
+  .animated-button .arr-1 {
+  right: 10px;
+  top: 5px;
+  }
+
+.animated-button .arr-2 {
+  left: -105%;
+  top:5px ;
+}
+
+
+
+.animated-button:hover .arr-1 {
+  right: -50%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 2px;
+}
+
+
+
+.animated-button:hover .text {
+  transform: translateX(32px);
+  color: #04361D;
+  left: 10px;
+}
+
+  
+  .btn {
+    max-width: 220px;
+    font-size: clamp(10px, 3.5vw, 14px);
+    padding: clamp(6px, 1vh, 10px) clamp(15px, 5vw, 25px);
+    min-height: clamp(35px, 5vh, 45px);
+  }
+  
+  header {
+    padding: 8px 15px;
+  }
+  
+  .logo {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
+  }
+}
+
+
+
+
+
+/* Touch and Hover Improvements for Mobile */
+@media (hover: none) and (pointer: coarse) {
+  .animated-button:hover,
+  .btn:hover,
+  .navbar a:hover {
+    transform: none;
+  }
+  
+  .animated-button:active {
+    transform: scale(0.95);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+   
+    <link rel="stylesheet" href="cliniclog.css">
+    
+</head>
+<body>
+  
+   
+    <div class="form-container">
+        <div class="form-card">
+            <!-- Header with hospital icon and title -->
+            <div class="form-header">
+                <div class="hospital-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <rect x="10" y="15" width="40" height="35" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="15" y="20" width="8" height="25" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="37" y="20" width="8" height="25" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="22" y="25" width="16" height="8" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="30" y1="10" x2="30" y2="18" stroke="white" stroke-width="3"/>
+                        <line x1="26" y1="14" x2="34" y2="14" stroke="white" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1>Donations</h1>
+                </div>
+            </div>
+
+           
+            
+  
+ 
+  
+
+   <h1>Donations</h1>
+      <% donations.forEach(c => { %>
+       <div class="form-section">
+                <div class="form-row">
+                    <div class="form-field">
+                      
+                     
+  <label>Country:</label>
+  <label><%=c.country%></label><br>
+</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                     <label>Amount:</label>
+ <label><%=c.price%></label><br>
+
+                    </div>
+                </div>
+  
+  <div class="form-row">
+                    <div class="form-field">
+                       <label>Payment method:</label>
+  <label><%=c.payment_method%></label><br>
+
+                    </div>
+                </div>
+<hr>
+   <% }) %>
+                
+ 
+
+  
+  
+                      </div>
+            </div>
+
+          
+
+          
+             <a href="/clinic">  <button  class="submit-btn"> Go To Dashboard</button>
+                      </a>
+
+                      <a href="/logout">  <button  class="submit-btn" >  Log Out</button>
+                      </a>
+        </div>
+    </div>
+</body>
+</html>
+
+

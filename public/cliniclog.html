@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital profile</title>
+    <link rel="stylesheet" href="cliniclog.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-card">
+            <!-- Header with hospital icon and title -->
+            <div class="form-header">
+                <div class="hospital-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                        <rect x="10" y="15" width="40" height="35" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="15" y="20" width="8" height="25" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="37" y="20" width="8" height="25" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="22" y="25" width="16" height="8" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="30" y1="10" x2="30" y2="18" stroke="white" stroke-width="3"/>
+                        <line x1="26" y1="14" x2="34" y2="14" stroke="white" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1>HOSPITAL PROFILE</h1>
+                </div>
+            </div>
+
+            <!-- Hospital Information Section -->
+            <div class="form-section">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Hospital Name</label>
+                        <input type="text" name="hospitalName" placeholder="Your Hospital's Name" />
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Owner's Full Name</label>
+                        <input type="text" name="ownerName" placeholder="Owner's Name" />
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Full Address</label>
+                        <input type="text" name="address" placeholder="Address/City/Country" />
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field half-width">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="Contact Number" />
+                    </div>
+                    <div class="form-field half-width">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="form-section">
+                <h3 class="section-title">SERVICES INFORMATION</h3>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Services</label>
+                        <textarea name="services" rows="3" placeholder="Types of treatments offered (e.g., surgery, blood transfusions)/ Departments (e.g., pediatrics, orthopedics, emergency)/ Available prosthetic or rehabilitation services"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                <a href="clinic.html">Add Us</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Borel&family=DM+Serif+Text:ital@0;1&family=Diplomata&family=Oi&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Playwrite+MX+Guides&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <title>SignIn</title>
+     <link rel="stylesheet" href="signin.css">
+   
+    </head> 
+  <body>
+    <div id="back">
+      <div class="backRight">    
+      </div>
+      <div class="backLeft">
+      </div>
+    </div>
+
+    <div id="slideBox">
+      <div class="topLayer">
+        <div style="scrollbar-width: none;" class="left">
+          <div class="content">
+            <p class="account-prompt">Don't have an account?</p>
+            <h2>Sign Up</h2>
+            
+            <form id="form-signup" method="post" onsubmit="return false;">
+              <div class="form-element form-stack">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" type="email" name="email">
+              </div>
+              <div class="form-element form-stack">
+                <label for="username-signup" class="form-label">Username</label>
+                <input id="username-signup" type="text" name="username">
+              </div>
+              <div class="form-element form-stack">
+                <label for="password-signup" class="form-label">Password</label>
+                <input id="password-signup" type="password" name="password">
+              </div>
+             
+              <div class="form-element form-submit">
+               <button onclick="location.href='../choice/choose.html'" class="signup" type="button">Sign up</button>
+                <button id="goLeft" class="signup off">Log In</button> 
+              </div>
+            </form>
+            
+            <div class="divider">
+              <span>OR</span>
+            </div>
+            
+            <!-- Social Login Options -->
+            <div class="social-login">
+              <button class="social-btn" id="apple-signup">
+                <i class="fab fa-apple"></i>
+                Continue with Apple
+              </button>
+              <button class="social-btn" id="google-signup">
+                <i class="fab fa-google"></i>
+                Continue with Google
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="scrollbar-width: none;" class="right">
+          <div class="content">
+            <p class="account-prompt">Already have an account?</p>
+            <h2>Login</h2>
+            
+            <form id="form-login" method="post" onsubmit="return false;">
+              <div class="form-element form-stack">
+                <label for="username-login" class="form-label">Username/Email</label>
+                <input id="username-login" type="text" name="username">
+              </div>
+              <div class="form-element form-stack">
+                <label for="password-login" class="form-label">Password</label>
+                <input id="password-login" type="password" name="password">
+              </div>
+              
+              <div class="forgot-password">
+                <a href="#" id="forgot-password-link">Forgot Password?</a>
+              </div>
+              
+              <div class="form-element form-submit">
+                <button onclick="location.href='../choice/choose.html'" class="login" type="button">Log In</button>
+                <button id="goRight" class="login off" name="signup">Sign Up</button>
+              </div>
+            </form>
+            
+            <div class="divider">
+              <span>OR</span>
+            </div>
+            
+            <!-- Social Login Options -->
+            <div class="social-login">
+              <button class="social-btn" id="apple-login">
+                <i class="fab fa-apple"></i>
+                Continue with Apple
+              </button>
+              <button class="social-btn" id="google-login">
+                <i class="fab fa-google"></i>
+                Continue with Google
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="signin.js"></script>
+</body></html>

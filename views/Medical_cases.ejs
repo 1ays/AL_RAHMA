@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="menu.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+     <link href="navbar.css" rel="stylesheet">
+  <title>Medical Cases</title>
+ </head>
+<body>
+  <div class="wrap">
+   <%- include("navbar.ejs") %>
+<br>
+<h1>All Patient Cases</h1>
+    <nav class="image-menu">
+       
+  <% medical.forEach(c => { %>
+    <div class="case-card">
+      
+    <img src="/uploads/<%= c.image %>" width="200">
+  
+      <p>status: <%=c.status%> </p> 
+      <p> description <%=c.description%> </p> 
+       <p> Blood Type: <%= c.blood_type %></p>
+     <p>price: <%= c.price %></p>
+    <p>  side:<%= c.side %></p>
+    <p> type of limb: <%= c.type_of_limb %></p>
+       <div class="actions">
+          <a href="/edit_case/<%= c.id_case %>">
+    <button type="button">Edit</button>
+  </a>
+     <!---- <button class="btn-details" data-details="">More Details</button>-->
+        </div>
+    </div>
+  <% }) %>
+ 
+  <script>
+    const modal = document.getElementById("modal");
+    const modalText = document.getElementById("modal-text");
+    const closeBtn = document.getElementById("close-modal");
+
+    document.querySelectorAll(".btn-details").forEach(btn => {
+      btn.addEventListener("click", () => {
+        modalText.textContent = btn.getAttribute("data-details");
+        modal.classList.add("active");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>

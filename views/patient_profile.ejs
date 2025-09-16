@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patient profile</title>
+    <link rel="stylesheet" href="/style.css">
+   <link href="navbar.css" rel="stylesheet">
+</head>
+<body>
+     <%- include("navbarp.ejs") %>
+    <div class="container">
+        <h1>Your profile</h1>
+        <form method ="post" action="/patient_profile">
+            <label >First Name:</label>
+           
+           <input type="text" placeholder="<%= p.first_name %>" name="first_name">
+
+            
+            <label >Last Name:</label>
+            
+            <input type="text" placeholder="<%= p.last_name %>" name="last_name ">
+
+            <label>Email:</label>
+           
+            <input type="email" placeholder="<%= s %>" name="email">
+
+
+            <label >Password:</label>
+            <label >*** </label>
+             <input type="password" name="password">
+
+            <label >Phone:</label>
+           
+            <input type="number" placeholder="<%= p.phone_number %>" name="phone">
+
+
+            <label >Age:</label>
+           
+            <input type="number" placeholder="<%= p.age %>" name="age">
+
+
+            <label >Gender:</label>
+            
+            <input type="text" placeholder="<%= p.gender %>" name="gender">
+
+        <button type="submit">Update</button>
+            </form>
+        </div>
+        </body>
+</html>

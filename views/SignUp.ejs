@@ -1,0 +1,282 @@
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Sign-Up Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+
+    
+      <form action="/SignUp" method="post">
+    <div class="form-group">
+    
+      <label for="userType">Select User Type:</label>
+      <select id="userType" onchange="showFields()" name="role">
+        <option value="">-- Choose --</option>
+        <option value="Clinic">Clinic</option>
+        <option value="Prosthetist">Prosthetist</option>
+        <option value="Donator">Donator</option>
+      </select>
+    </div>-->
+
+    <!-- Common Fields -->
+    <!--<div id="commonFields" class="hidden">
+      <div class="form-group">
+        <input type="email" name="email" placeholder=" email">
+      
+        <input type="password" name="password" placeholder=" password">
+      </div>
+    </div>
+
+   <div id="ClinicFields" class="hidden">
+     <div class="form-group">
+         <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Address" name="address">
+        <input type="text" placeholder="Donation link" name="donation_link">
+     </div>        
+
+         </div>
+
+      <div id="ProsthetistFields" class="hidden">
+         <input type="text" placeholder="FirstName" name="first_name">
+      <input type="text" placeholder="LastName" name="last_name">
+       <input type="number" placeholder="Phone" id="signup-Phone" name="phone">
+       <input type="text" placeholder="Work Address" name="work_address">
+       </div>
+      
+
+      <div id="DonatorFields" class="hidden">
+          
+      <input type="text" placeholder="FirstName" name="first_name">
+      <input type="text" placeholder="LastName" name="last_name">
+       
+      
+        </div>
+
+      <button type="submit">Sign Up</button>
+      </form>
+      <p>don't you have an account </p> <a href="/login">login</a>
+  </div>
+
+
+  <script>
+    function showFields() {
+      const userType = document.getElementById("userType").value;
+
+      // Always show common fields once user type is chosen
+      document.getElementById("commonFields").classList.toggle("hidden", !userType);
+
+      // Hide all specific fields
+      document.getElementById("ClinicFields").classList.add("hidden");
+      document.getElementById("ProsthetistFields").classList.add("hidden");
+      document.getElementById("DonatorFields").classList.add("hidden");
+
+      // Show fields based on selection
+      if (userType === "Clinic") {
+        document.getElementById("ClinicFields").classList.remove("hidden");
+      } else if (userType === "Prosthetist") {
+        document.getElementById("ProsthetistFields").classList.remove("hidden");
+      } else if (userType === "Donator") {
+        document.getElementById("DonatorFields").classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>-->
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Borel&family=DM+Serif+Text:ital@0;1&family=Diplomata&family=Oi&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Playwrite+MX+Guides&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <title>SignIn</title>
+     <link rel="stylesheet" href="signin.css">
+   
+    </head> 
+  <body>
+    <div id="back">
+      <div class="backRight">    
+      </div>
+      <div class="backLeft">
+      </div>
+    </div>
+
+    <div id="slideBox">
+      <div class="topLayer">
+        <div style="scrollbar-width: none;" class="left">
+          <div class="content">
+            <p class="account-prompt">Don't have an account?</p>
+            <h2>Sign Up</h2>
+            
+            <form id="form-signup" method="post"  action="/SignUp">
+              <div class="form-element form-stack">
+               
+       
+      <label for="userType" class="form-label">Select User Type:</label>
+      <select id="userType" onchange="showFields()" name="role" required>
+        <option value="">-- Choose --</option>
+        <option value="Clinic">Clinic</option>
+       <!-- <option value="Prosthetist">Prosthetist</option>-->
+        <option value="Donator">Donator</option>
+      </select>
+    </div>
+
+    <div id="commonFields" class="hidden">
+      
+        <div class="form-element form-stack">
+          <label  class="form-label">Email</label>
+        <input type="email" name="email" required>
+</div>
+
+        <div class="form-element form-stack">
+        <label  class="form-label">Password</label>
+        <input type="password" name="password" required>
+        </div>
+        </div>
+     
+    
+
+   <div id="ClinicFields" class="hidden">
+     
+      <div class="form-element form-stack">
+        <label  class="form-label">Name</label>
+         <input type="text"name="name" required>
+         </div>
+         <div class="form-element form-stack">
+           <label  class="form-label">Address</label>
+        <input type="text" name="address" required>
+        </div>
+        <div class="form-element form-stack">
+          <label  class="form-label">Donation link</label>
+        <input type="text"  name="donation_link" required>
+        </div>
+     </div>   
+
+     <div id="DonatorFields" class="hidden">
+<div class="form-element form-stack">
+          <label  class="form-label">First name</label>
+      <input type="text"  name="first_name" required>
+      </div>
+      <div class="form-element form-stack">
+      <label class="form-label">Last name</label>
+      <input type="text"  name="last_name" required>
+</div>
+        </div>
+
+      
+      
+              <div class="form-element form-submit">
+              <!---- <button onclick="location.href='../choice/choose.html'" class="signup" type="button">Sign up</button>-->
+              <button type="submit" class="signup">Sign Up</button>  
+              <button id="goLeft" class="signup off">Log In</button> 
+              </div>
+            </form>
+            
+            
+          </div>
+        </div>
+       <div style="scrollbar-width: none;" class="right">
+          <div class="content">
+            <p class="account-prompt">Already have an account?</p>
+            <h2>Login</h2>
+            
+            <form id="form-login" method="post" action="/login">
+              <div class="form-element form-stack">
+                <label for="username-login" class="form-label">Email</label>
+                <input id="username-login" type="text" name="email" required>
+              </div>
+              <div class="form-element form-stack">
+                <label for="password-login" class="form-label">Password</label>
+                <input id="password-login" type="password" name="password" required>
+              </div>
+              
+             
+              
+              <div class="form-element form-submit">
+               <!---- <button onclick="location.href='../choice/choose.html'" class="login" type="button">Log In</button>-->
+               <button type="submit" class="login">Log In</button>
+                <button id="goRight" class="login off" name="signup">Sign Up</button>
+              </div>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="signin.js"></script>
+     <script>
+    function showFields() {
+      const userType = document.getElementById("userType").value;
+
+      // Always show common fields once user type is chosen
+      document.getElementById("commonFields").classList.toggle("hidden", !userType);
+
+      // Hide all specific fields
+      document.getElementById("ClinicFields").classList.add("hidden");
+     // document.getElementById("ProsthetistFields").classList.add("hidden");
+      document.getElementById("DonatorFields").classList.add("hidden");
+
+      // Show fields based on selection
+      if (userType === "Clinic") {
+        document.getElementById("ClinicFields").classList.remove("hidden");
+      } else if (userType === "Prosthetist") {
+        document.getElementById("ProsthetistFields").classList.remove("hidden");
+      } else if (userType === "Donator") {
+        document.getElementById("DonatorFields").classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
+

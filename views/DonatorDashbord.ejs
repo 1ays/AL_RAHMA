@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="menu.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+  <title>Medical Cases</title>
+ </head>
+<body>
+  <div class="wrap">
+   <%- include("navbard.ejs") %>
+<br>
+<h1>Medical Cases</h1>
+    <nav class="image-menu">
+        <% if (locals.m) { %>
+  <% m.forEach(c => { %>
+    <div class="case-card">
+      
+    <img src="/uploads/<%= c.image %>" width="200">
+
+      <p>status: <%=c.status%> </p> 
+      <p> description <%=c.description%> </p> 
+       <p> Blood Type: <%= c.blood_type %></p>
+     <p>price: <%= c.price %></p>
+    <p>  side:<%= c.side %></p>
+    <p> type of limb: <%= c.type_of_limb %></p>
+       <div class="actions">
+          <a href="/donate/<%= c.id_patient %>">
+    <button type="button">Donate</button>
+    
+  </a>
+   
+        </div>
+    </div>
+  <% }) %>
+   <% } %>
+ 
+ 
+</body>
+</html>
