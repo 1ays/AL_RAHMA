@@ -1,7 +1,9 @@
  AL_RAHMA
  Description
 
-AL_RAHMA is a web platform based in Gaza that helps connect patients who have lost limbs with donors who want to support their treatment and medical care.
+AL_RAHMA is a web platform based in Gaza that helps connect patients who have lost limbs with donors who want to support their treatment and medical care.Hospitals log in to the site and create accounts for patients, including their medical conditions, which are displayed on the home page. Hospitals can view donations for each patient and update patient statuses—for example, marking a case as "completed" once all donations have been collected.
+
+Donors can log in to view all patients’ medical conditions and make donations accordingly.
 
 The platform allows:
 
